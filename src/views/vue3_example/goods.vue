@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
 import type { Ref } from 'vue'
-import { useGetTableHeight } from './combinatorialFunction/getTableHeight'
+
+// import { useGetTableHeight } from './combinatorialFunction/getTableHeight'
+import { useTableHeight } from '@/composables/tableHeight'
 
 // form 类型
 interface Form {
@@ -76,8 +78,8 @@ const mTableHeight = ref(0)
 onMounted(() => {
   const dom = table.value as HTMLElement | null
   if (dom) {
-    const aaa = useGetTableHeight(dom, 40)
-
+    // const aaa = useGetTableHeight(dom, 40)
+    const aaa = useTableHeight(dom, 40)
     // watchEffect(() => {
     //   mTableHeight.value = aaa.value
     // })

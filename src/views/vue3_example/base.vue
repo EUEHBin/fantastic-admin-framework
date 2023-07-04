@@ -35,14 +35,14 @@ onMounted(() => {
 const question = ref('')
 const answer = ref('the answer is')
 
-watch(question, (newValue, oldValue) => {
+watch(question, (newValue) => {
   answer.value = `the answer is ${newValue}...`
 }, { deep: true, immediate: true })
 
 // ref
-const input = ref(null)
+const input = ref()
 onMounted(() => {
-  input?.value?.focus()
+  input.value.focus()
 })
 
 function mBtnChange(id: number) {

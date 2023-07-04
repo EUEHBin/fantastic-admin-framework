@@ -15,6 +15,7 @@ const buttonConfig = ref({
 
 // 侧边栏主导航当前实际宽度
 const mainSidebarActualWidth = computed(() => {
+  // eslint-disable-next-line no-restricted-globals
   let actualWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--g-main-sidebar-width'))
   if (['head', 'single'].includes(settingsStore.settings.menu.menuMode)) {
     actualWidth = 0
@@ -24,6 +25,7 @@ const mainSidebarActualWidth = computed(() => {
 
 // 侧边栏次导航当前实际宽度
 const subSidebarActualWidth = computed(() => {
+  // eslint-disable-next-line no-restricted-globals
   let actualWidth = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--g-sub-sidebar-width'))
   if (settingsStore.settings.menu.subMenuCollapse) {
     actualWidth = 64

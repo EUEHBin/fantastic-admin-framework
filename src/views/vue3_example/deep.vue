@@ -2,7 +2,7 @@
 import { computed, reactive } from 'vue'
 import { useUser } from '../../store/pinia-test/user'
 import VModel from './components/v-model.vue'
-import { useMouse } from './combinatorialFunction/move'
+import { useMouse } from '@/composables/useMouse'
 
 interface AllName {
   firstName: any
